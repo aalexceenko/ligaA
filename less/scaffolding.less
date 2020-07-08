@@ -1,0 +1,106 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  src: url("../fonts/NunitoSans-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "NunitoSans-Black";
+  font-style: normal;
+  src: url("../fonts/NunitoSans-Black.ttf") format("ttf");
+}
+@font-face {
+  font-weight: 200;
+  font-family: "NunitoSans-Light";
+  font-style: normal;
+  src: url("../fonts/NunitoSans-Light.ttf") format("ttf");
+}
+
+@font-face {
+  font-weight: 200;
+  font-family: "PlayfairDisplay-Regular";
+  font-style: normal;
+  src: url("../fonts/PlayfairDisplay-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "NunitoSans-Bold";
+  font-style: normal;
+  src: url("../fonts/NunitoSans-Bold.ttf") format("ttf");
+}
+
+
+
+body {
+  min-width: 320px;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', 'Arial', sans-serif;
+  margin: 0 auto;
+  transition: all 0.3s;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+
+body.dark .header__menu a {
+  color: #FFFFFF;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../img/input-not-checked.svg) center no-repeat;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 6px;
+  top: 5.4px;
+  background: url(../img/sun-checked.svg) center no-repeat;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: url(../img/input-checked.svg) center no-repeat;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background: url(../img/moon-checked.svg) center no-repeat;
+  left: -1px;
+}

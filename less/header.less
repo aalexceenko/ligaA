@@ -1,0 +1,296 @@
+.header {
+  min-height: 50px;
+  padding-top: 18px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 18px 0;
+    flex-wrap: wrap;
+  }
+
+  &__menu {
+    width: 178px;
+    margin: 167px 67px auto 75px;
+    display: none;
+
+    a {
+      display: inline-block;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 46px;
+      opacity: 0.3;
+
+      &:first-of-type {
+        order: 0;
+        opacity: 1;
+      }
+
+      &:nth-of-type(2) {
+        order: 2;
+      }
+
+      &:nth-of-type(3) {
+        order: 3;
+      }
+
+      &:nth-of-type(4) {
+        order: 4;
+      }
+
+      &:nth-of-type(5) {
+        order: 1;
+        opacity: 1;
+      }
+    }
+  }
+
+
+  &__btn, &__weather, &__theme, .switch {
+    display: none;
+  }
+
+  &__toggle {
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 24px;
+    height: 22px;
+    background: url('../img/btn.svg') no-repeat;
+
+    svg {
+      fill: #2C39F2;
+    }
+
+    &::after, &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0px;
+      width: 24px;
+      height: 4px;
+      background-color: #000000;
+      display: block;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+    
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+  .show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__menu--openned {
+    background: #2C39F2;
+    height: 100vh;
+    .header__toggle svg {
+      fill: white;
+    }
+  }
+
+  .header__menu--closed {
+
+    .header__toggle {
+
+      &::after, &::before {
+        display: none;
+      }
+    }
+  }
+
+  .menu--opened {
+    overflow: hidden;
+  }
+
+@media(min-width: 768px) {
+  .header {
+
+    &__logo {
+      display: flex;
+      flex-wrap: wrap;
+      width: 190px;
+
+      a {
+        width: 120px;
+      }
+    }
+
+    &__weather, &__theme, .switch {
+      display: block;
+    }
+
+    &__weather {
+      font-size: 11px;
+      line-height: 16px;
+      margin: 0;
+    }
+  
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 18px 0;
+      flex-wrap: nowrap;
+    }
+  
+    &__menu {
+      width: 400px;
+      margin: 0;
+      justify-content: space-between;
+      display: flex;
+  
+      a {
+        color: #000000;
+        font-size: 16px;
+        line-height: 35px;
+  
+        &:nth-of-type(2) {
+          order: 1;
+        }
+  
+        &:nth-of-type(3) {
+          order: 2;
+        }
+  
+        &:nth-of-type(4) {
+          order: 3;
+        }
+  
+        &:nth-of-type(5) {
+          order: 4;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__btn {
+      width: 170px;
+      height: 40px;
+      box-sizing: border-box;
+      padding-top: 3px;
+      background: #2C39F2;
+      font-size: 14px;
+      line-height: 33px;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+  
+    &__toggle {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+
+    &__logo {
+      width: 250px;
+    }
+  
+    &__wrapper {
+      width: 989px;
+      margin: 0 auto;
+    }
+  
+    &__menu {
+      width: 470px;
+    }
+
+    &__btn {
+      display: block;
+    }
+
+    &__weather {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .header {
+    width: 1280px;
+    margin: 0 auto 110px;
+
+    &__logo {
+      display: flex;
+      flex-wrap: wrap;
+      width: 250px;
+    }
+  
+    &__wrapper {
+      display: flex;
+      width: 1280px;
+      justify-content: space-between;
+      margin: 0 18px 0;
+      flex-wrap: no-wrap;
+    }
+  
+    &__menu {
+      width: 470px;
+  
+      a {
+        font-size: 16px;
+        line-height: 35px;
+  
+        &:first-of-type {
+          order: 0;
+          opacity: 1;
+        }
+  
+        &:nth-of-type(2) {
+          order: 1;
+        }
+  
+        &:nth-of-type(3) {
+          order: 2;
+        }
+  
+        &:nth-of-type(4) {
+          order: 3;
+        }
+  
+        &:nth-of-type(5) {
+          order: 4;
+          opacity: 1;
+        }
+      }
+    }
+
+    &__weather {
+      font-size: 18px;
+      line-height: 32px;
+    }
+
+    &__btn {
+      width: 170px;
+      height: 40px;
+      box-sizing: border-box;
+      padding-top: 6px;
+      background: #2C39F2;
+      font-size: 14px;
+      line-height: 33px;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+
+    &__toggle {
+      display: none;
+    }
+  }
+}

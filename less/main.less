@@ -1,0 +1,365 @@
+.main {
+  padding-top: 44px;
+  margin-left: 15px;
+  margin-right: 20px;
+
+  h1, h2 {
+    font-size: 48px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  h1 {
+    line-height: 50px;
+  }
+
+  h2 {
+    line-height: 46px;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(44, 57, 242, 0.9);
+    margin-bottom: 39px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+
+    span {
+      color: #FF1553;
+    }
+  }
+
+  &__wrapper {
+
+    &-logo {
+      svg {
+        margin-left: 47px;
+      }
+    }
+
+    &-info {
+      position: relative;
+      margin-bottom: 24px;
+
+      ul {
+        list-style: none;
+        padding-left: 60px;
+        margin-bottom: 34px;
+      }
+
+      li {
+        font-size: 17px;
+        line-height: 21px;
+        margin-bottom: 14px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -60px;
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        &:nth-of-type(1) {
+          &::before {
+            content: '01';
+          }
+        }
+
+        &:nth-of-type(2) {
+          &::before {
+            content: '02';
+          }
+        }
+
+        &:nth-of-type(3) {
+          &::before {
+            content: '03';
+          }
+        }
+
+        &:nth-of-type(4) {
+          &::before {
+            content: '004';
+          }
+        }
+
+        &:nth-of-type(5) {
+          &::before {
+            content: '005';
+          }
+        }
+
+        &:nth-of-type(6) {
+          margin-left: -60px;
+          margin-top: 35px;
+        }
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 24px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+  
+    h1, h2 {
+      font-size: 50px;
+    }
+  
+    h2 {
+      margin-bottom: 0;
+    }
+  
+    p {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 32px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__wrapper {
+      margin-bottom: 24px;
+
+      &-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        svg {
+          margin-left: 0;
+        }
+
+        div {
+
+          &:first-of-type {
+            width: 270px;
+          }
+
+          &:last-of-type {
+            width: 220px;
+          }
+        }
+      }
+
+      &-info {
+        ul {
+          padding-left: 60px;
+          margin-bottom: 34px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+    
+        li {
+          font-size: 17px;
+          line-height: 21px;
+          margin-bottom: 14px;
+          width: 250px;
+    
+          &::before {
+            top: 0;
+            left: -60px;
+            font-size: 24px;
+            line-height: 30px;
+            color: #F81B56;
+          }
+    
+          &:nth-of-type(6) {
+            margin-top: 10px;
+          }
+        }
+    
+        p {
+          font-size: 17px;
+          line-height: 24px;
+          margin-bottom: 24px;
+        }
+    
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    width: 989px;
+    margin: 0 auto;
+
+    &__wrapper {
+
+      &-logo {
+        margin-bottom: 80px;
+        padding-right: 50px;
+      }
+
+      &-info {
+        padding-right: 50px;
+
+        ul {
+          padding-left: 0;
+        }
+    
+        li {
+          margin-bottom: 70px;
+          box-sizing: border-box;
+          width: 270px;
+    
+          &::before {
+            top: -40px;
+          }
+
+          &:nth-of-type(1) {
+            padding-right: 60px;
+          }
+
+          &:nth-of-type(3) {
+            padding-right: 40px;
+          }
+
+          &:nth-of-type(4) {
+            padding-right: 20px;
+          }
+    
+          &:nth-of-type(6) {
+            margin-left: 0;
+            margin-top: 0;
+          }
+    
+        }
+    
+        p {
+          font-size: 17px;
+          line-height: 24px;
+          margin-bottom: 24px;
+        }
+    
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    width: 1280px;
+    padding-top: 0;
+
+    h1, h2 {
+      font-size: 70px;
+    }
+  
+    h1 {
+      line-height: 90px;
+    }
+  
+    h2 {
+      line-height: 68px;
+      margin-bottom: 0;
+    }
+  
+    p {
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    &__wrapper {
+      justify-content: start;
+
+      &-logo {
+        margin-bottom: 130px;
+        padding-right: 110px;
+
+        svg {
+          margin-right: 67px;
+        }
+
+        div {
+         
+          &:first-of-type {
+            margin-right: 248px;
+          }
+
+          &:last-of-type {
+            width: 330px;
+
+            p {
+              &:first-of-type{
+                margin-bottom: 37px;
+              }
+            }
+          }
+        }
+      }
+
+      &-info {
+    
+        li {
+          font-size: 24px;
+          line-height: 32px;
+          margin-bottom: 88px;
+          width: 330px;
+    
+          &::before {
+            top: -50px;
+            font-size: 40px;
+            line-height: 44px;
+          }
+
+          &:nth-of-type(1) {
+            padding-right: 42px;
+          }
+
+          &:nth-of-type(3) {
+            padding-right: 40px;
+          }
+
+          &:nth-of-type(4) {
+            padding-right: 0;
+            width: 350px;
+          }
+
+          &:nth-of-type(5) {
+            width: 365px;
+          }
+    
+          &:nth-of-type(6) {
+            margin-left: 0;
+            margin-top: 0;
+          }
+        }
+    
+        p {
+          font-size: 17px;
+          line-height: 24px;
+          margin-bottom: 24px;
+        }
+    
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
